@@ -1,0 +1,5 @@
+6 July 2025
+
+I spent some time thinking about what components my engine will need. Some are obvious, like math and rendering. However, there are others that are lower-level and need precedence over others, like logging and threading. It's a little overwhelming but I'm embracing the challenge.
+
+There's a text on design patterns I've been rummaging through to learn about cleaner development constructs. These should ease development and mitigate future issues.
