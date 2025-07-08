@@ -1,11 +1,24 @@
-[ ] logging
-[ ] math
+Core & Foundations
+
 [ ] allocators
 [ ] threading
-[ ] listeners
+[ ] logging
+[ ] math
+
+Platform & Input/Output
+
+[ ] compatibility
 [ ] filesystem
+[ ] listeners
+
+Data Flow
+
 [ ] parsers
 [ ] networking
+[ ] serialization
+
+Game Systems
+
 [ ] tests
 [ ] ai
 [ ] rendering
@@ -13,6 +26,4 @@
 [ ] scripting
 [ ] audio
 [ ] animation
-[ ] serialization
-[ ] platform
 ...
