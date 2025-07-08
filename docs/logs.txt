@@ -3,3 +3,11 @@
 I spent some time thinking about what components my engine will need. Some are obvious, like math and rendering. However, there are others that are lower-level and need precedence over others, like logging and threading. It's a little overwhelming but I'm embracing the challenge.
 
 There's a text on design patterns I've been rummaging through to learn about cleaner development constructs. These should ease development and mitigate future issues.
+
+9 July 2025
+
+Put together directory first target: memalloc (short for memory allocators).
+
+Has no code in it yet but planned out which allocation strategies to implement in the future.
+
+May involve some extensive research, specifically regarding C++ standard library and algorithms.
