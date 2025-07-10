@@ -1,3 +1,15 @@
+Listed below are either targets or individual components of a larger target...
+
+Preprocessing
+
+[ ] platform
+[ ] qualifiers
+[ ] asserts
+[ ] debugging
+[ ] breakpoints
+[ ] hints
+[ ] alignment
+
 Core & Foundations
 
 [ ] allocators
@@ -5,9 +17,8 @@ Core & Foundations
 [ ] logging
 [ ] math
 
-Platform & Input/Output
+Input/Output
 
-[ ] compatibility
 [ ] filesystem
 [ ] listeners
 
