@@ -10,7 +10,7 @@
     #undef PLATFORM_WINDOWS
     #define PLATFORM_WINDOWS 1
 #elif defined(__linux__)
-    #define PLATFORM_LINUX
+    #undef PLATFORM_LINUX
     #define PLATFORM_LINUX 1
 #elif defined(__APPLE__) && defined(__MACH__)
     #undef PLATFORM_MAC
