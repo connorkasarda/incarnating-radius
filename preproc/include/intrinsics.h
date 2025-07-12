@@ -16,3 +16,5 @@
     #define FORCE_INLINE inline
     #define RESTRICT 
 #endif
+
+#endif
