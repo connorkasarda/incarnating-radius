@@ -15,11 +15,13 @@
 #elif defined(__APPLE__) && defined(__MACH__)
     #undef PLATFORM_MAC
     #define PLATFORM_MAC 1
-#elif defined(__unix__) || defined(__unix) || PLATFORM_MAC || PLATFORM_LINUX
-    #undef PLATFORM_UNIX
-    #define PLATFORM_UNIX 1
 #else
     #error "PLATFORM UNKNOWN"
+#endif
+
+#if defined(__unix__) || defined(__unix) || PLATFORM_MAC || PLATFORM_LINUX
+    #undef PLATFORM_UNIX
+    #define PLATFORM_UNIX 1
 #endif
 
 #endif
