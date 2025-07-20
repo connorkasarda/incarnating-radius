@@ -7,5 +7,7 @@ project(incarnating-radius
 
 # TODO Setup file that detects system variables and details?
 
+# TODO Add definitions for build type to pass down to C++ code
+
 add_subdirectory(preproc)
 add_subdirectory(memalloc)
