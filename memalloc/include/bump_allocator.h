@@ -3,6 +3,7 @@
 
 namespace IncarnatingRadius::Memory
 {
+    /// A simple linear allocator that just "bumps" a pointer forward
     class BumpAllocator : public MemoryAllocator
     {
     public:
