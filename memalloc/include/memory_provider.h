@@ -3,7 +3,7 @@
 
 namespace IncarnatingRadius::Memory
 {
-    /// Memory provider interface for strategies that preallocate memory based on OS and other factors
+    /// Interface that provides memory stores for allocators
     class MemoryProvider
     {
     public:
