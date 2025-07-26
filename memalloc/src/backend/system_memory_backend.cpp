@@ -12,22 +12,14 @@
 void* IncarnatingRadius::Memory::SystemMemoryBackend::allocate(size_t size, size_t alignment)
 {
 #if PLATFORM_WINDOWS
-    void* ptr = VirtualAlloc(nullptr,
-                             size,
-                             MEM_COMMIT | MEM_RESERVE,
-                             PAGE_READWRITE);
+    void* ptr = VirtualAlloc(nullptr, size, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
     if (!ptr)
     {
         HANDLE_ALLOC_FAILURE;
     }
     return ptr;
 #elif PLATFORM_LINUX
-    void* ptr = mmap(nullptr,
-                     size,
-                     PROT_READ | PROT_WRITE,
-                     MAP_ANONYMOUS | MAP_PRIVATE,
-                     -1,
-                     0);
+    void* ptr = mmap(nullptr, size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS | MAP_PRIVATE, -1, 0);
     if (ptr == MAP_FAILED)
     {
         HANDLE_ALLOC_FAILURE;
