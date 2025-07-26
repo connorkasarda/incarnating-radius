@@ -1,5 +1,5 @@
-#ifndef INTRINSICS_H
-#define INTRINSICS_H
+#ifndef INTRINSICS_MACROS_H
+#define INTRINSICS_MACROS_H
 
 #include <compiler.h>
 

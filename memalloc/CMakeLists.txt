@@ -8,3 +8,5 @@ file(GLOB_RECURSE SOURCES "${SOURCE_DIR}/*.cpp")
 add_library(${TARGET_NAME} STATIC ${HEADERS} ${SOURCES})
 
 target_include_directories(${TARGET_NAME} PRIVATE ${INCL_DIR})
+
+target_link_libraries(${TARGET_NAME} PRIVATE preproc)

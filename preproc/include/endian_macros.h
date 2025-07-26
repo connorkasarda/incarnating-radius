@@ -1,5 +1,5 @@
-#ifndef ENDIAN_H
-#define ENDIAN_H
+#ifndef ENDIAN_MACROS_H
+#define ENDIAN_MACROS_H
 
 #define ENDIAN_BIG    0
 #define ENDIAN_LITTLE 0

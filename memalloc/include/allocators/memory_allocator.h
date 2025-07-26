@@ -11,6 +11,7 @@ namespace IncarnatingRadius::Memory
     public:
         /// Destructor
         virtual ~MemoryAllocator() = default;
+
         /**
          * @brief Returns pointer to memory for object
          * @param size Amount of memory required for object
@@ -19,14 +20,10 @@ namespace IncarnatingRadius::Memory
          */
         virtual void* allocate(size_t size,
                                size_t alignment = alignof(std::max_align_t)) = 0;
-        /**
-         * @brief Templated allocate that simplifies memory acquisition
-         * @return Pointer to allocated memory for object of type T
-         */
-        template<typename T>
-        virtual T* allocate() = 0;
+
         /// Resets entire memory block
         virtual void reset() = 0;
+
     }; // class MemoryAllocator
 } // namespace IncarnatingRadius::Memory
 

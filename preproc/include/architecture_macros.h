@@ -1,5 +1,5 @@
-#ifndef ARCHITECTURE_H
-#define ARCHITECTURE_H
+#ifndef ARCHITECTURE_MACROS_H
+#define ARCHITECTURE_MACROS_H
 
 #define ARCH_X64   0
 #define ARCH_X86   0
