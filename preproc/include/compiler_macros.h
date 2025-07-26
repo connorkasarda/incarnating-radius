@@ -1,5 +1,5 @@
-#ifndef COMPILER_H
-#define COMPILER_H
+#ifndef COMPILER_MACROS_H
+#define COMPILER_MACROS_H
 
 #define COMPILER_GCC  0
 #define COMPILER_MSCV  0

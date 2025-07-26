@@ -1,0 +1,6 @@
+#ifndef THREAD_SAFE_MEMORY_BACKEND_H
+#define THREAD_SAFE_MEMORY_BACKEND_H
+
+
+
+#endif

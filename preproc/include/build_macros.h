@@ -1,5 +1,5 @@
-#ifndef BUILD_H
-#define BUILD_H
+#ifndef BUILD_MACROS_H
+#define BUILD_MACROS_H
 
 #define BUILD_TYPE_DEBUG          0
 #define BUILD_TYPE_RELEASE        0

@@ -1,5 +1,5 @@
-#ifndef PLATFORM_H
-#define PLATFORM_H
+#ifndef PLATFORM_MACROS_H
+#define PLATFORM_MACROS_H
 
 #define PLATFORM_WINDOWS 0
 #define PLATFORM_LINUX   0
