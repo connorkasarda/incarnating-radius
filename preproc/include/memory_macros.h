@@ -1,9 +1,9 @@
 #ifndef MEMORY_MACROS_H
 #define MEMORY_MACROS_H
 
-#include <build.h>
-#include <new>       // std::runtime_error
-#include <stdexcept> // std::bad_alloc
+#include <build_macros.h>
+#include <new>            // std::runtime_error
+#include <stdexcept>      // std::bad_alloc
 
 #define HANDLE_ALLOC_FAILURE \
     do { \
