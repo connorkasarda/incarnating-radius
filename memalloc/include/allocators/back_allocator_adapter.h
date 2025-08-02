@@ -1,6 +1,0 @@
-#ifndef BACK_ALLOCATOR_ADAPTER_H
-#define BACK_ALLOCATOR_ADAPTER_H
-
-
-
-#endif

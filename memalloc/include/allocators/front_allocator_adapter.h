@@ -1,6 +1,0 @@
-#ifndef FRONT_ALLOCATOR_ADAPTER_H
-#define FRONT_ALLOCATOR_ADAPTER_H
-
-
-
-#endif
