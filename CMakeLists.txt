@@ -7,5 +7,4 @@ project(incarnating-radius
 
 # TODO Create preprocessor definitions
 
-# TODO Add subdirectories here
-
+add_subdirectory(memory-management)
