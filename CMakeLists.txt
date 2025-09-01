@@ -5,20 +5,7 @@ project(incarnating-radius
         DESCRIPTION "soft real-time agent-based computer simulation engine"
         LANGUAGES CXX)
 
-# TODO Setup file that detects system variables and details?
+# TODO Create preprocessor definitions
 
-# Add compiler definitions for build type to pass down to source code
-if(CMAKE_BUILD_TYPE STREQUAL "Debug")
-    add_definitions(-DDEBUG_BUILD)
-elseif(CMAKE_BUILD_TYPE STREQUAL "Release")
-    add_definitions(-DRELEASE_BUILD)
-elseif(CMAKE_BUILD_TYPE STREQUAL "RelWithDebInfo")
-    add_definitions(-DRELWITHDEBINFO_BUILD)
-elseif(CMAKE_BUILD_TYPE STREQUAL "MinSizeRel")
-    add_definitions(-DMINSIZEREL_BUILD)
-else()
-    message(FATAL_ERROR "Unknown build type: `${CMAKE_BUILD_TYPE}`")
-endif()
+# TODO Add subdirectories here
 
-add_subdirectory(preproc)
-add_subdirectory(memalloc)
