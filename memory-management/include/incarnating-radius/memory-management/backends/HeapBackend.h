@@ -7,6 +7,7 @@ namespace IncarnatingRadius::MemoryManagement::Backends
 {
     class HeapBackend : public Backend
     {
+    public:
         HeapBackend() = default;
         ~HeapBackend() override = default;
     }; // class HeapBackend

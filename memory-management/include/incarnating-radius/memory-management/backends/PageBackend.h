@@ -7,6 +7,7 @@ namespace IncarnatingRadius::MemoryManagement::Backends
 {
     class PageBackend : public Backend
     {
+    public:
         PageBackend() = default;
         ~PageBackend() override = default;
     }; // class PageBackend

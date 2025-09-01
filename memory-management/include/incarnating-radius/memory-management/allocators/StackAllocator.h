@@ -7,6 +7,7 @@ namespace IncarnatingRadius::MemoryManagement::Allocators
 {
     class StackAllocator : public Allocator
     {
+    public:
         StackAllocator() = default;
         ~StackAllocator() override = default; 
     }; // class StackAllocator
