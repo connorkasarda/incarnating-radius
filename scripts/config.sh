@@ -29,11 +29,11 @@ print_usage()
     echo "Options:"
     echo "  -s, --src-dir [PATH]        Specify where root-level CMake script is located (default: .)"
     echo "  -b, --build-loc [PATH]      Specify the build folder path (default: build)"
-    echo "  -c, --config [BUILD TYPE]   Configure the build type for pipeline (e.g. Debug, Release, RelWithDebInfo, MinSizeRel)"
+    echo "  -c, --config [BUILD TYPE]   Configure the build type for pipeline (default: Debug)"
     echo "  -w, --wdev                  Enable CMake's developer warnings"
     echo "  -e, --werror-dev            Render developer warnings as errors"
     echo "  -t, --trace                 Print out every executed line of CMake code"
-    echo "  -l, --log-level [LEVEL]     Specify which CMake messages are displayed (e.g. ERROR, WARNING, NOTICE, STATUS, VERBOSE, DEBUG, TRACE)"
+    echo "  -l, --log-level [LEVEL]     Specify which CMake messages are displayed (default: STATUS)"
     echo "  -d, --debug                 Enable debug log messages for script run"
     echo "  -h, --help                  Prints usage message for tis configure script"
     exit 0;
@@ -57,22 +57,12 @@ while [[ $# -gt 0 ]]; do
 done
 
 # Run safety checks on options passed in
-log_debug "Parsed options:"
-log_debug "  Source directory:           $SOURCE_PATH"
-log_debug "  Build directory:            $BUILD_PATH"
-log_debug "  Build configuration:        $CONFIG"
-log_debug "  Developer warnings enabled: $SHOW_WDEV"
-log_debug "  Treat warnings as errors:   $WERROR_DEV"
-log_debug "  Trace enabled:              $TRACE"
-log_debug "  Log level:                  $LOG_LEVEL"
-log_debug "  Debug mode:                 $DEBUG"
-# TODO validate_option() function?
 if [[ "$CONFIG" != "Debug" && \
       "$CONFIG" != "Release" && \
       "$CONFIG" != "RelWithDebInfo" && \
       "$CONFIG" != "MinSizeRel" ]]; then
     log_error "Invalid CMake configuration type: $CONFIG"
-    log_error "  Valid options: Debug, Release, RelWithDebInfo, MinSizeRel"
+    log_error "Valid options: Debug, Release, RelWithDebInfo, MinSizeRel"
     exit 1
 fi
 if [[ "$LOG_LEVEL" != "ERROR" && \
@@ -83,7 +73,7 @@ if [[ "$LOG_LEVEL" != "ERROR" && \
       "$LOG_LEVEL" != "DEBUG" && \
       "$LOG_LEVEL" != "TRACE" ]]; then
     log_error "Invalid CMake log level: $LOG_LEVEL"
-    log_error "  Valid options: ERROR, WARNING, NOTICE, STATUS, VERBOSE, DEBUG, TRACE"
+    log_error "Valid options: ERROR, WARNING, NOTICE, STATUS, VERBOSE, DEBUG, TRACE"
     exit 1
 fi
 
@@ -121,15 +111,15 @@ log_debug "Constructed cmake command: "
 log_debug "  $(printf '%q ' "${cmd[@]}")"
 
 # Expose accepted options
-log_info "Running script:                                 $SCRIPT_DIR/$(basename "$0")"
-log_info "  Script executing from:                        $(cd "$ROOT_DIR" && pwd)"
-log_info "  Path containing source (root-level CMake):    $ABS_SOURCE_PATH"
-log_info "  Build directory:                              $ABS_BUILD_PATH"
-log_info "  CMake build configuration:                    $CONFIG"
-log_info "  CMake developer warnings enabled:             $CMAKE_DEV_WARN_MSG"
-log_info "  Treating CMake developer warnings as errors:  $CMAKE_WARN_ERR_MSG"
-log_info "  CMake tracing:                                $CMAKE_TRACE_MSG"
-log_info "  CMake logging level:                          $CMAKE_LOG_LVL_MSG"
+log_info "Running script:                              $SCRIPT_DIR/$(basename "$0")"
+log_info "Script executing from:                       $(cd "$ROOT_DIR" && pwd)"
+log_info "Path containing source (root-level CMake):   $ABS_SOURCE_PATH"
+log_info "Build directory:                             $ABS_BUILD_PATH"
+log_info "CMake build configuration:                   $CONFIG"
+log_info "CMake developer warnings enabled:            $CMAKE_DEV_WARN_MSG"
+log_info "Treating CMake developer warnings as errors: $CMAKE_WARN_ERR_MSG"
+log_info "CMake tracing:                               $CMAKE_TRACE_MSG"
+log_info "CMake logging level:                         $CMAKE_LOG_LVL_MSG"
 
 # Execute
 log_info "Executing CMake configuration step..."
