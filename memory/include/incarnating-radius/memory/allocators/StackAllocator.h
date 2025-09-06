@@ -1,9 +1,9 @@
 #ifndef STACK_ALLOCATOR_H
 #define STACK_ALLOCATOR_H
 
-#include <incarnating-radius/memory-management/allocators/Allocator.h>
+#include <incarnating-radius/memory/allocators/Allocator.h>
 
-namespace IncarnatingRadius::MemoryManagement::Allocators
+namespace IncarnatingRadius::Memory::Allocators
 {
     class StackAllocator : public Allocator
     {
@@ -11,6 +11,6 @@ namespace IncarnatingRadius::MemoryManagement::Allocators
         StackAllocator() = default;
         ~StackAllocator() override = default; 
     }; // class StackAllocator
-} // namespace IncarnatingRadius::MemoryManagement::Allocators
+} // namespace IncarnatingRadius::Memory::Allocators
 
 #endif // STACK_ALLOCATOR_H

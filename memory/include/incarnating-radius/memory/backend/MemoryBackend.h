@@ -1,17 +1,17 @@
-#ifndef STORAGE_H
-#define STORAGE_H
+#ifndef MEMORY_BACKEND_H
+#define MEMORY_BACKEND_H
 
-namespace IncarnatingRadius::MemoryManagement::Storage
+namespace IncarnatingRadius::Memory::Backend
 {
     /**
      * @brief Raw memory backend interface
      */
-    struct Storage
+    struct MemoryBackend
     {
         /**
          * @brief Destructor
          */
-        virtual ~Storage() = default;
+        virtual ~MemoryBackend() = default;
         
         /**
          * @brief Obtains a block of memory for use
@@ -28,7 +28,7 @@ namespace IncarnatingRadius::MemoryManagement::Storage
          * @param alignment Defines pattern for acceptable addresses
          */
         virtual void release(void* pointer, std::size_t size, std::size_t alignment) = 0;
-    }; // struct Storage
-} // namespace IncarnatingRadius::MemoryManagement::Storage
+    }; // struct MemoryBackend
+} // namespace IncarnatingRadius::Memory::Backend
 
-#endif // STORAGE_H
+#endif // MEMORY_BACKEND_H

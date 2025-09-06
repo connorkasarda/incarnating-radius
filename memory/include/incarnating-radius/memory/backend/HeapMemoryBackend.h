@@ -1,22 +1,22 @@
-#ifndef HEAP_STORAGE_H
-#define HEAP_STORAGE_H
+#ifndef HEAP_MEMORY_BACKEND_H
+#define HEAP_MEMORY_BACKEND_H
 
-#include <incarnating-radius/memory-management/storage/Storage.h>
+#include <incarnating-radius/memory/backend/MemoryBackend.h>
 
-namespace IncarnatingRadius::MemoryManagement::Storage
+namespace IncarnatingRadius::Memory::Backend
 {
-    class HeapStorage : public Storage
+    class HeapMemoryBackend : public MemoryBackend
     {
     public:
         /**
          * @brief Constructor
          */
-        HeapStorage() = default;
+        HeapMemoryBackend() = default;
 
         /**
          * @brief Destructor
          */
-        ~HeapStorage() override = default;
+        ~HeapMemoryBackend() override = default;
         
         /**
          * @brief Obtains a block of memory via the heap
@@ -32,8 +32,8 @@ namespace IncarnatingRadius::MemoryManagement::Storage
          * @param size Size of memory block
          * @param alignment Defines pattern for acceptable addresses
          */
-        void release(void* pointer, std::size_t size, std::size_t alignment) override;
-    }; // class HeapStorage
-} // namespace IncarnatingRadius::MemoryManagement::Storage
+        void release(void* pointer, std::size_t size, std::size_t alignment) noexcept override;
+    }; // class HeapMemoryBackend
+} // namespace IncarnatingRadius::Memory::Backend
 
-#endif // HEAP_STORAGE_H
+#endif // HEAP_MEMORY_BACKEND_H
