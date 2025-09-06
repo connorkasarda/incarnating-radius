@@ -4,7 +4,7 @@
 namespace IncarnatingRadius::MemoryManagement::Storage
 {
     /**
-     * @brief Memory backend interface
+     * @brief Raw memory backend interface
      */
     struct Storage
     {
