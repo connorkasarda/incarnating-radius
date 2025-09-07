@@ -1,7 +1,7 @@
-#include <incarnating-radius/memory/backend/HeapMemoryBackend.h>
+#include <incarnating-radius/memory/HeapMemoryBackend.h>
 #include <new>
 
-namespace IncarnatingRadius::Memory::Backend
+namespace IncarnatingRadius::Memory
 {
     void* HeapMemoryBackend::acquire(std::size_t size, std::size_t alignment)
     {
@@ -12,5 +12,5 @@ namespace IncarnatingRadius::Memory::Backend
     {
        ::operator delete(pointer, size, std::align_val_t(alignment)); 
     }
-} // namespace IncarnatingRadius::Memory::Backend
+} // namespace IncarnatingRadius::Memory
 

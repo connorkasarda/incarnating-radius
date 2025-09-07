@@ -1,9 +1,9 @@
 #ifndef PAGE_MEMORY_BACKEND_H
 #define PAGE_MEMORY_BACKEND_H
 
-#include <incarnating-radius/memory/backend/MemoryBackend.h>
+#include <incarnating-radius/memory/MemoryBackend.h>
 
-namespace IncarnatingRadius::Memory::Backend
+namespace IncarnatingRadius::Memory
 {
     /**
      * @brief OS Page memory backend
@@ -21,6 +21,6 @@ namespace IncarnatingRadius::Memory::Backend
          */
         ~PageMemoryBackend() override = default;
     }; // class PageMemoryBackend
-}; // namespace IncarnatingRadius::Memory::Backend
+}; // namespace IncarnatingRadius::Memory
 
 #endif // PAGE_MEMORY_BACKEND_H

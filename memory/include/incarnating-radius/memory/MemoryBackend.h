@@ -1,13 +1,14 @@
 #ifndef MEMORY_BACKEND_H
 #define MEMORY_BACKEND_H
 
-namespace IncarnatingRadius::Memory::Backend
+namespace IncarnatingRadius::Memory
 {
     /**
      * @brief Raw memory backend interface
      */
-    struct MemoryBackend
+    class MemoryBackend
     {
+    public:
         /**
          * @brief Destructor
          */
@@ -28,7 +29,7 @@ namespace IncarnatingRadius::Memory::Backend
          * @param alignment Defines pattern for acceptable addresses
          */
         virtual void release(void* pointer, std::size_t size, std::size_t alignment) = 0;
-    }; // struct MemoryBackend
-} // namespace IncarnatingRadius::Memory::Backend
+    }; // class MemoryBackend
+} // namespace IncarnatingRadius::Memory
 
 #endif // MEMORY_BACKEND_H

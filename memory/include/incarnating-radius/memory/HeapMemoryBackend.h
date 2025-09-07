@@ -1,9 +1,9 @@
 #ifndef HEAP_MEMORY_BACKEND_H
 #define HEAP_MEMORY_BACKEND_H
 
-#include <incarnating-radius/memory/backend/MemoryBackend.h>
+#include <incarnating-radius/memory/MemoryBackend.h>
 
-namespace IncarnatingRadius::Memory::Backend
+namespace IncarnatingRadius::Memory
 {
     class HeapMemoryBackend : public MemoryBackend
     {
@@ -34,6 +34,6 @@ namespace IncarnatingRadius::Memory::Backend
          */
         void release(void* pointer, std::size_t size, std::size_t alignment) noexcept override;
     }; // class HeapMemoryBackend
-} // namespace IncarnatingRadius::Memory::Backend
+} // namespace IncarnatingRadius::Memory
 
 #endif // HEAP_MEMORY_BACKEND_H
