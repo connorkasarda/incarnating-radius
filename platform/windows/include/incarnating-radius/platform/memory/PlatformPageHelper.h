@@ -6,11 +6,20 @@ namespace IncarnatingRadius::Platform::Memory
     class PlatformPageHelper
     {
     public:
-        /** @brief Acquiring function */
-        // TODO
+        /**
+         * @brief Acquiring function
+         * @param size Amount of memory to acquire
+         * @param alignment Defines pattern for acceptable addresses
+         * @return pointer to acquired OS page memory block
+         */
+        static void* acquire(std::size_t size, std::size_t alignment);
 
-        /** @brief Releasing function */
-        // TODO 
+        /**
+         * @brief Releasing function
+         * @param pointer Location of OS page memory block
+         * @param alignment Defines pattern for acceptable addresses
+         */
+        static void release(void* pointer, std::size_t alignment) noexcept;
     }; // struct PlatformPageHelper
 } // namespace IncarnatingRadius::Platform::Memory
 

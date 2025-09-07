@@ -33,6 +33,13 @@ namespace IncarnatingRadius::Memory
          * @param alignment Defines pattern for acceptable addresses
          */
         void release(void* pointer, std::size_t size, std::size_t alignment) noexcept override;
+
+        /**
+         * @brief Relinquishes control of heap memory block (no size used)
+         * @param pointer Location of memory block
+         * @param alignment Defines pattern for acceptable addresses
+         */
+        void release(void* pointer, std::size_t alignment) noexcept override;
     }; // class HeapMemoryBackend
 } // namespace IncarnatingRadius::Memory
 

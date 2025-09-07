@@ -8,7 +8,10 @@ namespace IncarnatingRadius::Memory
     class StackMemoryAllocator : public MemoryAllocator
     {
     public:
+        /** @brief Constructor */
         StackMemoryAllocator() = default;
+
+        /** @brief Destructor */
         ~StackMemoryAllocator() override = default; 
     }; // class StackMemoryAllocator
 } // namespace IncarnatingRadius::Memory

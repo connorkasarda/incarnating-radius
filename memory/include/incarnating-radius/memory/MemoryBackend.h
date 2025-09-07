@@ -29,6 +29,13 @@ namespace IncarnatingRadius::Memory
          * @param alignment Defines pattern for acceptable addresses
          */
         virtual void release(void* pointer, std::size_t size, std::size_t alignment) = 0;
+
+        /**
+         * @brief Relinquishes control of memory block (doesn't need size)
+         * @param pointer Location of memory block
+         * @param alignment Defines pattern for acceptable addresses
+         */
+        virtual void release(void* pointer, std::size_t alignment) = 0;
     }; // class MemoryBackend
 } // namespace IncarnatingRadius::Memory
 
