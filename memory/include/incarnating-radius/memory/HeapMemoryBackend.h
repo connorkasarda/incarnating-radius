@@ -21,7 +21,7 @@ namespace IncarnatingRadius::Memory
         /**
          * @brief Obtains a block of memory via the heap
          * @param size Amount of heap memory to reserve
-         * @param alignment Defines pattern for acceptable addresses
+         * @param alignment Defines pattern for aligning memory
          * @return pointer to acquired memory block
          */
         void* acquire(std::size_t size, std::size_t alignment) override;
@@ -30,16 +30,9 @@ namespace IncarnatingRadius::Memory
          * @brief Relinquishes control of heap memory block
          * @param pointer Location of memory block
          * @param size Size of memory block
-         * @param alignment Defines pattern for acceptable addresses
+         * @param alignment Defines pattern for aligning memory
          */
         void release(void* pointer, std::size_t size, std::size_t alignment) noexcept override;
-
-        /**
-         * @brief Relinquishes control of heap memory block (no size used)
-         * @param pointer Location of memory block
-         * @param alignment Defines pattern for acceptable addresses
-         */
-        void release(void* pointer, std::size_t alignment) noexcept override;
     }; // class HeapMemoryBackend
 } // namespace IncarnatingRadius::Memory
 

@@ -17,9 +17,10 @@ namespace IncarnatingRadius::Platform::Memory
         /**
          * @brief Releasing function
          * @param pointer Location of OS page memory block
+         * @param size Amount of memory to free (vestigial since VirtualAlloc does not use size)
          * @param alignment Defines pattern for acceptable addresses
          */
-        static void release(void* pointer, std::size_t alignment) noexcept;
+        static void release(void* pointer, std::size_t size, std::size_t alignment) noexcept;
     }; // struct PlatformPageHelper
 } // namespace IncarnatingRadius::Platform::Memory
 

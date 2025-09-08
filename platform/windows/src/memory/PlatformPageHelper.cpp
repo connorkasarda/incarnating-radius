@@ -18,7 +18,7 @@ namespace IncarnatingRadius::Platform::Memory
         return reinterpret_cast<void*>(alignedPtr);
     }
 
-    void PlatformPageHelper::release(void* pointer, std::size_t alignment) noexcept
+    void PlatformPageHelper::release(void* pointer, std::size_t size, std::size_t alignment) noexcept
     {
         uintptr_t basePtr = reinterpret_cast<uintptr_t>(pointer) - alignment - 1;
 

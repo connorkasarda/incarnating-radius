@@ -17,25 +17,18 @@ namespace IncarnatingRadius::Memory
         /**
          * @brief Obtains a block of memory for use
          * @param size Amount of memory to reserve
-         * @param alignment Defines pattern for acceptable addresses
+         * @param alignment Defines pattern for aligning memory
          * @return pointer to acquired memory block
          */
-        virtual void* acquire(std::size_t size, std::size_t alignment) = 0;
+        virtual void* acquire(std::size_t size) = 0;
 
         /**
          * @brief Relinquishes control of memory block
          * @param pointer Location of memory block
          * @param size Size of memory block
-         * @param alignment Defines pattern for acceptable addresses
+         * @param alignment Defines pattern for aligning memory
          */
         virtual void release(void* pointer, std::size_t size, std::size_t alignment) = 0;
-
-        /**
-         * @brief Relinquishes control of memory block (doesn't need size)
-         * @param pointer Location of memory block
-         * @param alignment Defines pattern for acceptable addresses
-         */
-        virtual void release(void* pointer, std::size_t alignment) = 0;
     }; // class MemoryBackend
 } // namespace IncarnatingRadius::Memory
 
