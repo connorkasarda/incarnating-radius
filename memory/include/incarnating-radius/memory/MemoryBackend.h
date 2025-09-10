@@ -20,7 +20,7 @@ namespace IncarnatingRadius::Memory
          * @param alignment Defines pattern for aligning memory
          * @return pointer to acquired memory block
          */
-        virtual void* acquire(std::size_t size) = 0;
+        virtual void* acquire(std::size_t size, std::size_t alignment) = 0;
 
         /**
          * @brief Relinquishes control of memory block

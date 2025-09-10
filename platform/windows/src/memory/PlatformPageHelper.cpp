@@ -9,7 +9,7 @@ namespace IncarnatingRadius::Platform::Memory
         size_t alignedSize = size + alignment - 1;
 
         void* basePtr = VirtualAlloc(NULL, alignedSize, MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
-        if (basePtr == nullptr)
+        if (!basePtr)
             return nullptr;        
 
         uintptr_t alignedPtr = reinterpret_cast<uintptr_t>(basePtr) + alignment - 1;
